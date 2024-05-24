@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useEffect } from "react";
+import { getBookUrl } from "./service/booksUrl.service";
 
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  useEffect(() => {
+    (async () => {
+      const {data} = await getBookUrl("books");
+      console.log(data);
+    })();
+  }, []);
+  return <div>App</div>;
+};
 
-export default App
+export default App;

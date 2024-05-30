@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "../../hook/useFetch";
 import { getBookUrl } from "../../service/booksUrl.service";
-import Loading from "../../Loading";
+import LoadingDetailBook from "../../LoadingDetailBook";
 
 const DetailBookPage = () => {
   const { id } = useParams();
@@ -14,7 +14,7 @@ const DetailBookPage = () => {
   return (
     <div>
       {loading ? (
-        <Loading  />
+        <LoadingDetailBook/>
       ) : (
         <>
           {error ? (

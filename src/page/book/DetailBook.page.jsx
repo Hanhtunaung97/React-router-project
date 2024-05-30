@@ -14,7 +14,7 @@ const DetailBookPage = () => {
   return (
     <div>
       {loading ? (
-        <Loading />
+        <Loading  />
       ) : (
         <>
           {error ? (

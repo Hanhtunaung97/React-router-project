@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-const useFetch = (fetchFun, arg) => {
+ const useFetch = (fetchFun, arg) => {
   const [data, setData] = useState({
     loading: true,
     error: null,
@@ -8,8 +8,8 @@ const useFetch = (fetchFun, arg) => {
   });
   useEffect(() => {
     (async () => {
+      const data = await fetchFun(arg);
       try {
-        const data = await fetchFun(arg);
         setData((pre) => {
           return {
             loading: false,

@@ -1,8 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const useFetch = () => {
-  const [fetch, setFetch] = useState();
-  return <div>useFetch</div>;
+const useFetch = (fetchFun, arg) => {
+  const [data, setData] = useState({
+    loading: true,
+    error: null,
+    data: null,
+  });
+  useEffect(() => {
+    (async () => {
+      try {
+        const data = await fetchFun(arg);
+        setData((pre) => {
+          return {
+            loading: false,
+            error: null,
+            data: data,
+          };
+        });
+      } catch (error) {
+        setData((pre) => {
+          return {
+            loading: false,
+            data: null,
+            error: error.message,
+          };
+        });
+      }
+    })();
+  }, []);
+  return data;
 };
 
 export default useFetch;

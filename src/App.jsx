@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { HomePage } from "./page";
+import { DetailBookPage, HomePage } from "./page";
 import NotFound from "./NotFound";
 import { NavComponents } from "./components";
 
@@ -9,6 +9,7 @@ const App = () => {
       <NavComponents />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/detail/:id" element={<DetailBookPage/>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

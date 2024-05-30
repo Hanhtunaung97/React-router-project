@@ -2,8 +2,8 @@ import React from "react";
 import useFetch from "../hook/useFetch";
 import { getBookUrl } from "../service/booksUrl.service";
 import Loading from "../Loading";
-import BookListComponents from "../components/BookList.components";
 import { Link } from "react-router-dom";
+import { BookListComponents } from "../components";
 
 const HomePage = () => {
   const { data, error, loading } = useFetch(getBookUrl, "books");
@@ -18,7 +18,7 @@ const HomePage = () => {
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-5">
               {data.map((el) => (
-                <Link key={el.id}>
+                <Link key={el.id} to={`/detail/${el.id}`}>
                   <BookListComponents data={el} />
                 </Link>
               ))}

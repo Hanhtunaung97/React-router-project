@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import {
+  AdminPage,
   BlogPage,
   DashboardPage,
   DetailBookPage,
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="blog" element={<BlogPage />} />
           <Route path="user" element={<UserPage />} />
         </Route>
+        <Route path="/admin" element={<AdminPage/>}/>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

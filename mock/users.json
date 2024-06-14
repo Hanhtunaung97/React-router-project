@@ -1,14 +1,1 @@
-[
-    {
-      "id": 1,
-      "name": "HHA",
-      "email": "han@gmail.com",
-      "password": "han123"
-    },
-    {
-      "id": 2,
-      "name": "TH",
-      "email": "aga@gmail.com",
-      "password": "12345"
-    }
-  ]
+[{"id":1,"name":"HHA","email":"han@gmail.com","password":"han123"},{"id":2,"name":"TH","email":"aga@gmail.com","password":"12345"},{"name":"Han Htunaung","email":"hanhtunaung97@gmai.com","password":"98765","id":3},{"name":"Tiger","email":"tiger123@gmail.com","password":"tiger123","id":4}]

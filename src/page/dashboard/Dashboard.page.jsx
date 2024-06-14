@@ -13,7 +13,7 @@ const DashboardPage = () => {
       <div className=" grid grid-cols-10 min-h-screen ">
         <div className=" col-span-2 border border-violet-300 p-3 rounded-lg ">
           <ul className=" text-center">
-            <h1 className=" font-bold text-violet-500">
+            <h1 className=" font-bold text-violet-500 mb-3">
               {state?.userData?.name}
             </h1>
             <Link to={"/dashboard"}>

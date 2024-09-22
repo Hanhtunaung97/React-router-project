@@ -1,4 +1,4 @@
-# My React router testing project with Json Server using TailwindCSS
+# My React router project with Json Server using TailwindCSS
 
 ## <a>⚙️ Tech Stack</a>
 
